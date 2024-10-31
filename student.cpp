@@ -81,6 +81,16 @@ void student::add(){
     print_itemdot(); cout<<"请输入出生年份(YY):"; cin>>tmp; YY=check_year(tmp);
     if(!special_check()) goto need_redone_in_edit;
 
+     //身份证 
+    print_itemdot(); cout<<"请输入身份证18位:"; cin>>tempidcard;
+     while(tempidcard.length()!=18){ print_itemdot(); cout<<"error!: 学生身份证号码输入有误,改号码为十八位整数,请再次尝试:"; cin>>tempidcard;}
+    id=tempidcard;
+    //电话号码
+    print_itemdot();cout<<"请输入电话号码11位";cin>>tempphone_number;
+    while(tempphone_number.length()!=11){print_itemdot();cout<<"error!:学生电话号码输入有误，电话号码应为十一位整数，请再次尝试:";cin>>tempphone_number;}
+    phone_number=tempphone_number;
+    
+
     next=NULL;
 }
 
